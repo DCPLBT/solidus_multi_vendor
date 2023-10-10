@@ -3,7 +3,7 @@ module Spree::ProductDecorator
     base.after_destroy :touch_vendor
   end
 
-  Spree::Product.whitelisted_ransackable_associations += %w[vendor]
+  Spree::Product.allowed_ransackable_associations += %w[vendor]
 
   private
 

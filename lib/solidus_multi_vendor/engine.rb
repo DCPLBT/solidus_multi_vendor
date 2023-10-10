@@ -17,9 +17,9 @@ module SolidusMultiVendor
       g.test_framework :rspec
     end
 
-    initializer "solidus_multi_vendor.register_vendor_abilities" do
-      ::Spree::Ability.register_ability(::Spree::VendorAbility)
-    end
+    # initializer "solidus_multi_vendor.register_vendor_abilities" do
+    #   ::Spree::Ability.register_ability(::Spree::VendorAbility)
+    # end
 
     def self.activate
       Dir.glob(File.join(File.dirname(__FILE__), '../../app/**/*_decorator*.rb')) do |c|

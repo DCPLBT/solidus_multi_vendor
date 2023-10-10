@@ -3,7 +3,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-branch = ENV.fetch('SOLIDUS_BRANCH', 'master')
+branch = ENV.fetch('SOLIDUS_BRANCH', 'main')
 gem 'solidus', github: 'solidusio/solidus', branch: branch
 
 # Needed to help Bundler figure out how to resolve dependencies,
@@ -23,7 +23,7 @@ else
   gem 'sqlite3'
 end
 
-if branch == 'master' || branch >= 'v2.0'
+if branch == 'main' || branch >= 'v2.0'
   gem 'rails-controller-testing', group: :test
 else
   gem 'rails_test_params_backport', group: :test
